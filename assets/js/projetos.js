@@ -383,6 +383,24 @@ const PROJETOS = [
         "vertical": false
       },
       {
+        "tipo": "video",
+        "src": "assets/midia/documentario/documentarios/06-lake-tahoe.mp4",
+        "poster": "assets/midia/documentario/documentarios/06-lake-tahoe-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/documentario/documentarios/07-binance-hack.mp4",
+        "poster": "assets/midia/documentario/documentarios/07-binance-hack-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/documentario/documentarios/08-davis-vs-garcia.mp4",
+        "poster": "assets/midia/documentario/documentarios/08-davis-vs-garcia-thumb.jpg",
+        "vertical": false
+      },
+      {
         "tipo": "youtube",
         "id": "1bMs1gvvmUA",
         "titulo": "Stalin's Secret: documentário completo de 2ª Guerra"
@@ -436,6 +454,18 @@ const PROJETOS = [
         "tipo": "video",
         "src": "assets/midia/motion-graphics/explainers-e-motion/04-notion.mp4",
         "poster": "assets/midia/motion-graphics/explainers-e-motion/04-notion-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/motion-graphics/explainers-e-motion/05-psicologia-animada.mp4",
+        "poster": "assets/midia/motion-graphics/explainers-e-motion/05-psicologia-animada-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/motion-graphics/explainers-e-motion/06-dove-derma.mp4",
+        "poster": "assets/midia/motion-graphics/explainers-e-motion/06-dove-derma-thumb.jpg",
         "vertical": false
       }
     ]
@@ -1059,6 +1089,12 @@ const PROJETOS = [
         "tipo": "video",
         "src": "assets/midia/portifolio-eua/reels/08-brightside-rowing.mp4",
         "poster": "assets/midia/portifolio-eua/reels/08-brightside-rowing-thumb.jpg",
+        "vertical": true
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/portifolio-eua/reels/09-podcast-bem-estar.mp4",
+        "poster": "assets/midia/portifolio-eua/reels/09-podcast-bem-estar-thumb.jpg",
         "vertical": true
       }
     ]
