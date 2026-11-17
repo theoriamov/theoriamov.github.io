@@ -52,6 +52,7 @@
     "assets/midia/portifolio-eua/reels/06-digital-asset-empire.mp4",
     "assets/midia/portifolio-eua/reels/07-mario-zuniga-vermelho.mp4",
     "assets/midia/portifolio-eua/youtube/02-youtube-cinematic.mp4",
+    "assets/midia/portifolio-eua/reels/09-casa-de-ferias.mp4",
     "assets/midia/motion-graphics/explainers-e-motion/07-herbal-pitahaya.mp4",
     "assets/midia/documentario/documentarios/09-cabos-submarinos.mp4",
     "assets/midia/youtube/cortes-do-youtube/01-corte-financas.mp4",

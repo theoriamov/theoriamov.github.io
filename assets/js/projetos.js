@@ -1150,6 +1150,12 @@ const PROJETOS = [
         "src": "assets/midia/portifolio-eua/reels/08-brightside-rowing.mp4",
         "poster": "assets/midia/portifolio-eua/reels/08-brightside-rowing-thumb.jpg",
         "vertical": true
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/portifolio-eua/reels/09-casa-de-ferias.mp4",
+        "poster": "assets/midia/portifolio-eua/reels/09-casa-de-ferias-thumb.jpg",
+        "vertical": true
       }
     ]
   },

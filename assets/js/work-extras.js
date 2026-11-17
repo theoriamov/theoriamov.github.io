@@ -20,6 +20,7 @@ const WORK_EXTRAS = [
   vid("before-after-reel-3", "Before and after: interview reel with animated captions and graphics", "reels"),
   vid("before-after-reel-5", "Before and after: Spanish talking-head reel with animated captions and UI", "reels"),
   vid("knicks-mahjong-reel", "Not your grandma's mahjong: event promo reel with kinetic text", "reels"),
+  vid("vacation-rental-reel", "Vacation rental reel: themed rooms with kinetic captions (Portuguese)", "reels"),
   vid("brightside-rowing-reel", "Brightside Rowing: brand reel with kinetic text and giveaway call to action", "reels"),
   vid("freelancer-intro-video", "Video editor intro: talking head with motion graphics and text behind the subject", "reels", false),
   // ---- AI Video Ads ----
