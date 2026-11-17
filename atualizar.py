@@ -93,6 +93,8 @@ def ler_info(pasta):
             link, _, titulo = valor.partition("|")
             m = re.search(r"(?:v=|youtu\.be/|shorts/|embed/)([\w-]{11})", link)
             info["youtube"].append((m.group(1) if m else link.strip(), titulo.strip()))
+        elif chave == "video":   # vídeo que já está em outra pasta (ex.: "Documentário/Documentários/09 Cabos.mp4"): aparece aqui também, sem duplicar o arquivo
+            info.setdefault("videos", []).append(valor)
         elif chave in ("titulo", "título"):
             info["titulo"] = valor
         elif chave == "ano":
@@ -159,6 +161,15 @@ def processar_cliente(pasta, categoria_id, gerados):
         elif ext and arq.name.lower() != "info.txt" and not arq.is_dir():
             print(f"    (ignorado, formato não suportado: {arq.name})")
 
+    for ref in info.get("videos", []):
+        partes = Path(ref).parts
+        mp4 = SAIDA / slug(partes[0]) / slug(partes[1]) / f"{slug(Path(ref).stem)}.mp4"
+        thumb = mp4.with_name(mp4.stem + "-thumb.jpg")
+        if mp4.exists():
+            w, h = dimensoes(mp4)
+            itens.append({"tipo": "video", "src": web(mp4), "poster": web(thumb) if thumb.exists() else "", "vertical": h > w})
+        else:
+            print(f"    ! vídeo não encontrado: {ref}")
     itens += [{"tipo": "youtube", "id": yt, **({"titulo": t} if t else {})}
               for yt, t in info["youtube"] if f"yt:{yt}" not in OCULTOS]
     if not itens:

@@ -4,7 +4,8 @@
    - YouTube:  { tipo: "youtube", id: "ID_DO_VIDEO", titulo: "...", categoria: "..." }
                (o ID é o que vem depois de "watch?v=" ou "youtu.be/")
    - Arquivo:  { tipo: "video", src: "assets/midia/extras/arquivo.mp4", poster: "assets/midia/extras/arquivo-thumb.jpg", vertical: true, titulo: "...", categoria: "..." }
-   categoria: reels | ai | youtube | explainer | documentary | motion | food | business | auto | events
+   categoria: reels | ai | youtube | clips | explainer | documentary | motion | food | business | auto | events
+   Para um vídeo aparecer em duas abas sem duplicar: categoria: ["documentary", "youtube"]
    ========================================================= */
 const X = "assets/midia/extras/";
 const vid = (nome, titulo, categoria, vertical = true) => ({ tipo: "video", src: `${X}${nome}.mp4`, poster: `${X}${nome}-thumb.jpg`, vertical, titulo, categoria });
@@ -14,7 +15,6 @@ const WORK_EXTRAS = [
   vid("before-after-reel-2", "Before and after: raw vs edited talking-head reel", "reels"),
   vid("before-after-reel-4", "Before and after: education brand ad with kinetic text", "reels"),
   vid("digital-asset-empire-motion", "Podcast reel with kinetic captions and motion graphics", "reels"),
-  vid("podcast-wellness-reel", "Podcast reel: captions, B-roll and motion graphics for a wellness brand", "reels"),
   vid("is-this-real-reel", "Is this real? Talking-head reel with motion graphics", "reels"),
   vid("before-after-reel-1", "Before and after: phone footage turned into a cinematic reel", "reels"),
   vid("before-after-reel-3", "Before and after: interview reel with animated captions and graphics", "reels"),
@@ -39,6 +39,11 @@ const WORK_EXTRAS = [
   { tipo: "youtube", id: "VHMRHH2D6nQ", titulo: "YouTube video built from a script with images and B-roll", categoria: "youtube" },
   { tipo: "youtube", id: "q1t6UABJddg", titulo: "5 watches I wouldn't buy without trying first: YouTube review", categoria: "youtube" },
   { tipo: "youtube", id: "0gtZbfR_lnI", titulo: "Fiverr intro video: who I am and how I edit", categoria: "youtube" },
+  { tipo: "youtube", id: "BmCNkSZKHd8", titulo: "DIY water filter experiment: science YouTube video", categoria: "youtube" },
+  { tipo: "youtube", id: "YvmUsIe6v_o", titulo: "35 fights unbeaten: boxing YouTube video (Spanish)", categoria: "youtube" },
+  // ---- YouTube Clips (cortes de vídeos longos) ----
+  vid("finance-clip-motion", "Finance clip: short cut from a long video with data-driven motion graphics", "clips"),
+  vid("podcast-wellness-reel", "Podcast clip: captions, B-roll and motion graphics for a wellness brand", "clips"),
   // ---- Animated Explainers (faceless YouTube, illustration only) ----
   vid("grandpa-max-full-explainer", "Grandpa Max: full 11-minute animated YouTube explainer (2D characters, charts and UI)", "explainer", false),
   vid("psychology-animated-explainer", "Social psychology: hand-drawn animated YouTube explainer", "explainer", false),
@@ -48,6 +53,7 @@ const WORK_EXTRAS = [
   vid("dinosaur-explainer", "Dinosaur extinction explainer: kinetic text, UI and 3D Earth", "explainer", false),
   // ---- Documentary ----
   vid("documentary-process", "Documentary editing process: B-roll research, sound design and motion", "documentary", false),
+  vid("undersea-cables-documentary", "Undersea internet cables: documentary YouTube video with 3D maps and motion graphics", ["documentary", "youtube"], false),
   vid("lake-tahoe-documentary", "Lake Tahoe: geography documentary with animated 3D maps", "documentary", false),
   { tipo: "youtube", id: "1bMs1gvvmUA", titulo: "Stalin's Secret: full WWII documentary on YouTube (archival footage, narration, maps)", categoria: "documentary" },
   vid("megalodon-documentary", "Megalodon: documentary edit with narration and sound design", "documentary", false),
@@ -59,6 +65,7 @@ const WORK_EXTRAS = [
   { tipo: "youtube", id: "1Na6ipU6JEE", titulo: "Pompeii, 72 AD: documentary edit", categoria: "documentary" },
   // ---- Motion Graphics ----
   vid("saas-launch-motion", "SaaS product launch: UI motion graphics (spec ad)", "motion", false),
+  vid("herbal-pitahaya-retail-screen", "Herbal Pitahaya: ultra-wide retail screen animation", "motion", false),
   vid("dove-derma-retail-screen", "Dove Derma: ultra-wide retail screen animation (spec sample)", "motion", false),
   vid("showreel-2026", "Showreel 2026", "motion"),
   vid("watch-ui-animation", "Watch specs: UI motion graphics", "motion", false),

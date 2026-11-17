@@ -373,6 +373,27 @@ const PROJETOS = [
     ]
   },
   {
+    "categoria": "youtube",
+    "titulo": "Cortes do YouTube",
+    "ano": "",
+    "capa": "assets/midia/youtube/cortes-do-youtube/01-corte-financas-thumb.jpg",
+    "redes": {},
+    "itens": [
+      {
+        "tipo": "video",
+        "src": "assets/midia/youtube/cortes-do-youtube/01-corte-financas.mp4",
+        "poster": "assets/midia/youtube/cortes-do-youtube/01-corte-financas-thumb.jpg",
+        "vertical": true
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/youtube/cortes-do-youtube/02-podcast-bem-estar.mp4",
+        "poster": "assets/midia/youtube/cortes-do-youtube/02-podcast-bem-estar-thumb.jpg",
+        "vertical": true
+      }
+    ]
+  },
+  {
     "categoria": "documentario",
     "titulo": "Documentários",
     "ano": "",
@@ -425,6 +446,12 @@ const PROJETOS = [
         "tipo": "video",
         "src": "assets/midia/documentario/documentarios/08-davis-vs-garcia.mp4",
         "poster": "assets/midia/documentario/documentarios/08-davis-vs-garcia-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/documentario/documentarios/09-cabos-submarinos.mp4",
+        "poster": "assets/midia/documentario/documentarios/09-cabos-submarinos-thumb.jpg",
         "vertical": false
       },
       {
@@ -493,6 +520,12 @@ const PROJETOS = [
         "tipo": "video",
         "src": "assets/midia/motion-graphics/explainers-e-motion/06-dove-derma.mp4",
         "poster": "assets/midia/motion-graphics/explainers-e-motion/06-dove-derma-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/motion-graphics/explainers-e-motion/07-herbal-pitahaya.mp4",
+        "poster": "assets/midia/motion-graphics/explainers-e-motion/07-herbal-pitahaya-thumb.jpg",
         "vertical": false
       }
     ]
@@ -1117,12 +1150,6 @@ const PROJETOS = [
         "src": "assets/midia/portifolio-eua/reels/08-brightside-rowing.mp4",
         "poster": "assets/midia/portifolio-eua/reels/08-brightside-rowing-thumb.jpg",
         "vertical": true
-      },
-      {
-        "tipo": "video",
-        "src": "assets/midia/portifolio-eua/reels/09-podcast-bem-estar.mp4",
-        "poster": "assets/midia/portifolio-eua/reels/09-podcast-bem-estar-thumb.jpg",
-        "vertical": true
       }
     ]
   },
@@ -1138,6 +1165,31 @@ const PROJETOS = [
         "src": "assets/midia/portifolio-eua/youtube/02-youtube-cinematic.mp4",
         "poster": "assets/midia/portifolio-eua/youtube/02-youtube-cinematic-thumb.jpg",
         "vertical": false
+      }
+    ]
+  },
+  {
+    "categoria": "youtube",
+    "titulo": "YouTube EUA",
+    "ano": "",
+    "capa": "assets/midia/documentario/documentarios/09-cabos-submarinos-thumb.jpg",
+    "redes": {},
+    "itens": [
+      {
+        "tipo": "video",
+        "src": "assets/midia/documentario/documentarios/09-cabos-submarinos.mp4",
+        "poster": "assets/midia/documentario/documentarios/09-cabos-submarinos-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "youtube",
+        "id": "BmCNkSZKHd8",
+        "titulo": "DIY Water Filter Experiment: How Soil Filters Dirty Water"
+      },
+      {
+        "tipo": "youtube",
+        "id": "YvmUsIe6v_o",
+        "titulo": "35 Peleas Invicto. Un Mexicano lo humilló en 12 Rounds."
       }
     ]
   }

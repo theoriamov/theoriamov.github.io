@@ -9,6 +9,7 @@
     { id: "business", nome: "Brand & Business" },
     { id: "food", nome: "Food & Restaurants" },
     { id: "youtube", nome: "YouTube" },
+    { id: "clips", nome: "YouTube Clips" },
     { id: "explainer", nome: "Animated Explainers" },
     { id: "documentary", nome: "Documentary" },
     { id: "motion", nome: "Motion Graphics" },
@@ -51,6 +52,12 @@
     "assets/midia/portifolio-eua/reels/06-digital-asset-empire.mp4",
     "assets/midia/portifolio-eua/reels/07-mario-zuniga-vermelho.mp4",
     "assets/midia/portifolio-eua/youtube/02-youtube-cinematic.mp4",
+    "assets/midia/motion-graphics/explainers-e-motion/07-herbal-pitahaya.mp4",
+    "assets/midia/documentario/documentarios/09-cabos-submarinos.mp4",
+    "assets/midia/youtube/cortes-do-youtube/01-corte-financas.mp4",
+    "assets/midia/youtube/cortes-do-youtube/02-podcast-bem-estar.mp4",
+    "yt:BmCNkSZKHd8",
+    "yt:YvmUsIe6v_o",
     "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/01-video-ai-portfolio.mp4",
     "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/02-zone-of-genius.mp4",
     "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/03-middleman.mp4",
@@ -59,7 +66,6 @@
     "assets/midia/documentario/documentarios/08-davis-vs-garcia.mp4",
     "assets/midia/motion-graphics/explainers-e-motion/05-psicologia-animada.mp4",
     "assets/midia/motion-graphics/explainers-e-motion/06-dove-derma.mp4",
-    "assets/midia/portifolio-eua/reels/09-podcast-bem-estar.mp4",
     "assets/midia/video-com-ia/comercial-de-perfume/01-perfume.mp4",
     "assets/midia/video-com-ia/minotauro-energy/01-bebida-dos-campeoes.mp4",
     "assets/midia/video-com-ia/minotauro-energy/02-energetico-blender.mp4",
@@ -84,7 +90,8 @@
   const marcas = new Set(itens.map((i) => i.cliente)).size;
   $("#stats").innerHTML = `<div class="stat"><b>${itens.length}+</b><span>videos in this portfolio</span></div><div class="stat"><b>${marcas}</b><span>clients & projects</span></div><div class="stat"><b>2023</b><span>editing professionally since</span></div>`;
 
-  const usadas = new Set(itens.map((i) => i.cat));
+  const cats = (i) => [].concat(i.cat);   // um vídeo pode estar em mais de uma aba
+  const usadas = new Set(itens.flatMap(cats));
   $("#tabs").innerHTML = CATS.filter((c) => c.id === "all" || usadas.has(c.id))
     .map((c) => `<button class="tab${c.id === atual ? " is-on" : ""}" data-cat="${c.id}">${c.nome}</button>`).join("");
   $("#tabs").addEventListener("click", (e) => {
@@ -95,14 +102,14 @@
   });
 
   function render() {
-    lista = itens.filter((i) => atual === "all" || i.cat === atual);
+    lista = itens.filter((i) => atual === "all" || cats(i).includes(atual));
     $("#grid").innerHTML = lista.map((it, n) => {
       const largo = it.tipo === "youtube" || !it.vertical;
       const titulo = it.tipo === "youtube" && !it.destaque && it.titulo ? it.titulo : it.cliente;
       return `<button class="card${largo ? " card--wide" : ""}" data-n="${n}">
         <img class="card__img" src="${esc(thumb(it))}" alt="${esc(titulo)}" loading="lazy">
         <span class="card__play"></span>
-        <span class="card__info"><b>${esc(titulo)}</b><span>${esc(nomeCat(it.cat))}</span></span>
+        <span class="card__info"><b>${esc(titulo)}</b><span>${esc(nomeCat(cats(it).includes(atual) ? atual : cats(it)[0]))}</span></span>
       </button>`;
     }).join("");
   }
