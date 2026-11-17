@@ -23,6 +23,9 @@ const WORK_EXTRAS = [
   vid("brightside-rowing-reel", "Brightside Rowing: brand reel with kinetic text and giveaway call to action", "reels"),
   vid("freelancer-intro-video", "Video editor intro: talking head with motion graphics and text behind the subject", "reels", false),
   // ---- AI Video Ads ----
+  vid("ai-cinematic-reel", "AI video reel: cinematic historical scenes made with AI", "ai", false),
+  vid("ai-zone-of-genius-ad", "Zone of Genius: AI cinematic ad with narration, kinetic captions and sound design", "ai"),
+  vid("ai-middleman-ad", "The Middleman: AI cinematic ad with narration and motion graphics (1-minute preview)", "ai"),
   vid("minotauro-energy-ad", "Minotauro Energy: AI commercial", "ai"),
   vid("ai-perfume-ad", "AI product ad: perfume", "ai", false),
   vid("property-mailers-explainer", "Adocs Property Mailers: AI-made narrated product explainer with UI animation", "ai", false),

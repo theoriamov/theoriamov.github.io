@@ -232,6 +232,33 @@ const PROJETOS = [
     ]
   },
   {
+    "categoria": "video-com-ia",
+    "titulo": "Anúncios Cinematográficos com IA",
+    "ano": "",
+    "capa": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/01-video-ai-portfolio-thumb.jpg",
+    "redes": {},
+    "itens": [
+      {
+        "tipo": "video",
+        "src": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/01-video-ai-portfolio.mp4",
+        "poster": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/01-video-ai-portfolio-thumb.jpg",
+        "vertical": false
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/02-zone-of-genius.mp4",
+        "poster": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/02-zone-of-genius-thumb.jpg",
+        "vertical": true
+      },
+      {
+        "tipo": "video",
+        "src": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/03-middleman.mp4",
+        "poster": "assets/midia/video-com-ia/anuncios-cinematograficos-com-ia/03-middleman-thumb.jpg",
+        "vertical": true
+      }
+    ]
+  },
+  {
     "categoria": "empresarial",
     "titulo": "Bluemetrix",
     "ano": "",
